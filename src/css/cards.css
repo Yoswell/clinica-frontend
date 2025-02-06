@@ -1,0 +1,262 @@
+/* Cards -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.cont-service, .cont-packages, .cont-speciality {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--gap-big);
+}
+
+& .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius);
+    padding: var(--padding-big);
+    background-color: var(--bg-body-br1);
+
+    & h1 { 
+        font-size: 15px;
+        width: 100%;
+        background-color: var(--bg-body-br8);
+        padding: 5px 10px;
+        border-radius: var(--radius);
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    & p {  color: var(--font-secondary); font-size: 13px; }
+
+    & h3 {
+        font-size: clamp(15px, 3vw, 17px);
+        color: var(--font-especial);
+        display: flex;
+        align-items: center;
+        gap: var(--gap-small);
+        margin-top: 5px;
+        font-weight: 600;
+
+        & span { color: var(--font-especial); font-weight: 500; }
+    }
+}
+
+/* Dashboard cards -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.container-card, .container-card-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--gap-big);
+}
+
+.container-card-two { grid-template-columns: 1fr 1fr; }
+
+& .cardDashboard {
+    width: 100%;
+    border-radius: var(--radius);
+    padding: var(--padding-big);
+    overflow: hidden;
+    position: relative;
+    background-color: var(--bg-body-br1);
+
+    &::before {
+        position: absolute;
+        content: '';
+        right: -30px;
+        top: -10px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(50deg, var(--bg-body-br3), var(--bg-body-br3));
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        right: -10px;
+        top: -70px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: linear-gradient(50deg, var(--bg-body-br3), var(--bg-body-br3));
+    }
+
+    & h1 { font-weight: 500; font-size: clamp(18px, 3vw, 25px); }
+
+    & p { color: var(--font-secondary); font-size: 16px; margin-top: 5px; }
+
+    & i {
+        font-size: 30px;
+        padding: var(--padding-small);
+        border-radius: var(--radius);
+        color: var(--bg-body-br6);
+        background-color: var(--bg-body-br3);
+        backdrop-filter: blur(1px);
+        border: 1px solid var(--bg-body-br4);
+        margin-right: 10px;
+    }
+}
+
+/* Consult card -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.cardDate {
+    padding: var(--padding-big);
+    border-radius: 10px;
+    background-color: var(--bg-body-br1);
+
+    & div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--font-especial);
+
+        & span { color: var(--font-secondary); padding: 0 !important; }
+    }
+
+    & .red-badge {
+        margin-top: 10px;
+        background-color: var(--bg-body-br8);
+        border: 1px solid var(--bg-body-br3);
+        color: var(--btn-red);
+        font-size: 11px;
+        font-weight: 500;
+        padding: 3px 5px;
+        border-radius: var(--radius);
+    }
+}
+
+/* Service card -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.cont-service {
+    & .cardService {
+        display: grid;
+        gap: var(--gap-medium);
+    }
+}
+
+/* Package cards -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.cardPackage {
+    flex-direction: column;
+    gap: var(--gap-medium);
+    
+    & .services-packages {
+        background-color: var(--bg-body-br8);
+        border-radius: var(--radius);
+        padding: var(--padding-medium);
+
+        & .title-service {
+            background-color: var(--bg-body-br1); 
+            font-size: 15px;
+            border-radius: var(--radius);
+        }
+    }
+}
+
+/* Speciality card -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.cardSpeciality {
+    padding: var(--padding-medium);
+    
+    & h1 { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        margin: 0;
+        padding-right: 5px;
+    }
+}
+
+/* Button of action -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.cont-button-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--gap-small);
+    
+    & .btn {
+        height: 25px;
+        width: 30px;
+        padding: 0;
+        display: grid;
+        place-content: center;
+        color: var(--font-primary);
+        background-color: var(--bg-body-br8);
+        border: 1px solid var(--bg-body-br3);
+
+        & i { font-size: 15px; }
+    }
+}
+
+.cont-button-action-big {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-medium);
+    
+    & .btn {
+        width: 100%;
+        height: 30px;
+        padding: 0;
+        display: grid;
+        place-content: center;
+
+        & i { font-size: 15px; }
+    }
+}
+
+
+/* Checked card -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.cont-checkboxCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.cardCheckBox {
+    padding: 6px 10px 6px 15px;
+    background: var(--bg-body-br8);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-medium);
+    border-radius: var(--radius);
+
+    & p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--font-primary);
+        font-weight: 500;
+    }
+}
+
+.card-active {
+    background: var(--btn-blue-ligth) !important;
+    border-color: var(--btn-ligth);
+    outline: 1px solid var(--btn-blue);
+    & p { color: var(--btn-blue-dark) !important; }
+}
+
+/* Responsive -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+@media (max-width: 1700px) {
+    .cont-service {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1400px) {
+    .cont-service {
+        grid-template-columns: 1fr 1fr;
+    }
+}

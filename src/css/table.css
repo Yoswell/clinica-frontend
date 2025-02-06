@@ -1,0 +1,105 @@
+.table-cont {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding-bottom: var(--padding-medium);
+    border-radius: var(--radius);
+    border: 1px solid var(--bg-body-br3);
+}
+
+table {  width: 100%; }
+
+thead {
+    & tr {
+        color: var(--font-especial);
+        text-align: left;
+        background-color: var(--bg-body-br1);
+        
+        & th {
+            padding: 0px 15px !important;
+            white-space: nowrap;
+            font-weight: 500;
+            
+            &:last-child { text-align: right; padding-left: 0 !important; }
+        }
+    }
+}
+
+tbody {
+    & tr {
+        color: var(--font-primary);
+        border: 1px solid var(--bg-body-br3);
+        border-left: none;
+        border-right: none;
+        
+        & td {
+            white-space: nowrap;
+            padding: 0px 15px;
+            font-size: 13px;
+            &:first-child { border-left: 0; }
+            
+            &:last-child {
+                padding: 5px 15px;
+                border-right: 0;
+                
+                & div {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
+
+& .column {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: var(--height-big);
+    gap: var(--gap-small);
+    padding: 5px 15px;
+    min-width: 40px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-medium);
+    height: var(--height-medium);
+
+    & .btn {
+        border-radius: var(--radius);
+        background-color: var(--bg-body);
+        color: var(--btn-orange);
+        border: none;
+        width: 30px;
+        height: var(--height-medium);
+
+        &:focus { outline: 1px solid var(--bg-body-br4); }
+    }
+
+    & span {
+        color: var(--font-secondary);
+        font-size: 13px;
+        background-color: var(--bg-body-br8);
+        border: 1px solid var(--bg-body-br3);
+        border-radius: var(--radius);
+        width: 150px;
+        height: var(--height-medium);
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+    
+    & select {
+        color: var(--font-especial);
+        background-color: var(--bg-body-br8);
+        height: var(--height-medium);
+        padding: 0 15px;
+        border-radius: var(--radius);
+        border: 1px solid var(--bg-body-br3);
+    }
+}

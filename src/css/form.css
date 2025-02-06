@@ -1,0 +1,85 @@
+/* Forms -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.cont-form {
+    width: 100%;
+    display: grid;
+    border-radius: var(--radius);
+    padding: var(--padding-big);
+    background-color: var(--bg-body-br1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    width: 100%;
+    display: grid;
+    gap: var(--gap-small);
+    border-radius: var(--radius);
+
+    & label {
+        color: var(--font-especial);
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    & p {
+        color: var(--font-secondary);
+        font-size: 13px;
+
+        & span {
+            font-weight: 600;
+            color: var(--btn-red);
+        }
+    }
+    
+    & input {
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: var(--radius);
+        background-color: var(--bg-body-br8);
+    }
+}
+
+.end-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--gap-medium);
+}
+
+.column { font-weight: 500; }
+
+/* Modal forms -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.modal-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(0.7);
+    display: grid;
+    place-items: center;
+    scale: 0;
+
+    & .form-modal {
+        width: 500px;
+        max-height: 400px;
+        background-color: var(--bg-body-br8);
+        border-radius: var(--radius);
+        padding: var(--padding-big);
+
+        & input {
+            border: 1px solid var(--bg-body-br3);
+        }
+    }
+}
+
+.show { scale: 1; }

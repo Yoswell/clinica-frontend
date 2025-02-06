@@ -1,0 +1,113 @@
+.btn {
+    height: var(--height-medium);
+    border-radius: var(--btn-radius);
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+    padding: 0 15px;
+}
+
+.btn-avatar {
+    background-color: var(--bg-black);
+    color: var(--bg-white);
+    font-weight: 500;
+    height: var(--height-big);
+    border-radius: var(--radius);
+}
+
+.btn-black, .btn-ok, .btn-cancel {
+    background-color: var(--font-especial);
+    color: var(--bg-body-br8);
+    font-weight: 500;
+    height: var(--height-big);
+
+    & i { font-size: 18px; }
+}
+
+.btn-bar {
+    display: flex;
+    gap: var(--gap-small);
+    padding: 0 15px;
+    font-weight: 500;
+    border: 1px solid var(--bg-body-br4);
+    background-color: var(--bg-body);
+    color: var(--font-especial);
+    height: var(--height-medium);
+    
+    & i { font-weight: 900; font-size: 18px; }
+}
+
+.btn-filter {
+    border-radius: var(--radius);
+    background-color: var(--bg-body-br8);
+    color: var(--font-especial);
+    outline: 1px solid var(--bg-body-br3);
+
+    &:last-child {
+        background-color: var(--font-especial);
+        color: var(--bg-body-br8);
+        font-weight: 500;
+    }
+}
+
+.input-filter {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    background-color: var(--bg-body-br8);
+    color: var(--font-especial);
+    border-radius: var(--radius);
+    height: var(--height-medium);
+    width: 100%;
+    outline: 1px solid var(--bg-body-br3);
+
+    & input {
+        width: 100%;
+        background: transparent;
+        outline: none;
+        padding-left: 10px;
+    }
+
+    & h3 {
+        font-weight: 500;
+        font-size: 13px;
+    }
+}
+
+.btn-actions {
+    width: 100%;
+    display: grid;
+    border: 1px solid var(--bg-body);
+    place-content: center;
+    height: var(--height-small);
+
+    &:first-child {
+        border-color: var(--bg-body-br3);
+        & i { color: var(--btn-orange); }
+    }
+
+    &:last-child {
+        border-color: var(--bg-body-br3);
+        & i { color: var(--btn-red); }
+    }
+
+    & i { color: var(--font-primary); }
+}
+
+.btn-float-left {
+    position: fixed;
+    bottom: 30px;
+    right: 290px;
+}
+
+.btn-ok {
+    background-color: var(--btn-orange);
+    color: var(--bg-white);
+}
+
+@media (max-width: 1400px) {
+    .btn-float-left {
+        bottom: 20px;
+        right: 20px;
+    }
+}

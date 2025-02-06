@@ -1,0 +1,143 @@
+.invoice {
+    height: auto;
+    display: grid;
+    gap: 30px;
+    position: relative;
+    padding: 20px;
+
+    & .text-group {
+        & div {
+            margin-top: 10px;
+            display: grid;
+            gap: 3px;
+        }
+    }
+
+    & .name {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    & p {
+        font-size: 14px;
+        color: var(--font-especial);
+    }
+
+    & .invoice-icon {
+        width: 100px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        filter: saturate(0) !important;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    & .title-invoice-number {
+        font-size: 20px;
+    }
+    
+    & .table-invoice {
+        display: grid;
+        gap: 3px;
+
+        & .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 3px double var(--bg-body-br3);
+
+            & h3 {
+                width: 200px;
+                font-size: 12px;
+                font-weight: 600;
+                padding: 0 10px;
+                padding-bottom: 12px;
+            }
+            
+            & p {
+                width: 100px;
+                display: flex;
+                align-content: center;
+                font-size: 12px;
+                padding-bottom: 12px;
+            }
+            
+            & h5 {
+                font-weight: 500;
+                max-width: none;
+                font-size: 12px;
+                padding: 0 10px;
+                padding-bottom: 12px;
+            }
+        }
+    }
+
+    & .container-table-invoice {
+        overflow: hidden;
+        border: 3px double var(--bg-body-br3);
+
+        & table {
+            border-collapse: separate;
+        }
+
+        & tr {
+            border: none;
+            background-color: var(--bg-body-br8);
+        }
+        
+        & th {
+            padding: 0 10px;
+            padding-bottom: 12px !important;
+            color: var(--font-especial);
+            border: 3px double var(--bg-body-br3);
+            font-weight: 600;
+        }
+        
+        & td {
+            padding: 0 10px;
+            padding-bottom: 10px !important;
+        }
+    }
+
+    & .footer {
+        display: grid;
+        gap: 30px;
+        padding-bottom: 70px;
+
+        & h3 {
+            font-weight: 500;
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        & p {
+            font-size: 12px;
+            line-height: 24px;
+        }
+    }
+
+    & .float-footer {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: grid;
+        place-items: center;
+
+        & h3 {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        & p {
+            font-size: 12px;
+            line-height: 24px;
+            white-space: nowrap;
+        }
+    }
+}

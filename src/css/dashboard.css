@@ -1,0 +1,169 @@
+/* Main containers -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.main-container { display: flex; width: 100%; }
+
+.cont-nav { 
+    padding: var(--padding-medium);
+}
+
+.container-scroll {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 70px);
+    gap: 15px;
+    overflow-y: scroll;
+    padding: 20px;
+    background-color: var(--bg-body-br8);
+    border-radius: 0 0 10px 10px;
+    background-size: 250px;
+    position: relative;
+    border: 1px solid var(--bg-body-br3);
+}
+
+/* Charts -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+.container-chart {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-big);
+}
+
+.barchart {
+    border-radius: var(--radius);
+    padding: var(--padding-medium);
+    display: grid;
+    gap: var(--gap-small);
+    backdrop-filter: blur(2px);
+    border: 1px solid var(--bg-body-br3);
+    padding: var(--padding-big);
+
+    & h6 { color: var(--font-secondary); font-size: 13px; }
+    
+    & h1 {
+        font-weight: 600;
+        color: var(--font-especial);
+        border-radius: var(--radius);
+        font-size: 16px;
+    }
+
+    & .label-x { font-weight: 500; }
+
+    & .label-color {
+        color: var(--font-especial);
+        font-weight: 500;
+        margin: 0 auto;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border-radius: 2px;
+            background-color: var(--bg-body-br6);
+        }
+    }
+
+    & .cont-labels {
+        padding: 10px 0 0 0;
+        border-top: 1px solid var(--bg-body-br3);
+
+        & .label-color {
+            margin: 0 25px;
+
+            &:nth-child(1) { &::before { background-color: var(--bg-body-br4); border: 1px solid var(--bg-body-br3); } }
+
+            &:nth-child(2) { &::before { background-color: var(--bg-body-br3); } }
+
+            &:nth-child(3) { &::before { background-color: var(--btn-orange); } }
+        }
+    }
+    
+    & .scroll-bar {
+        width: 100%;
+        height: 200px;
+        padding: 0;
+        overflow-x: scroll;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        position: relative !important;
+
+        & p { color: var(--font-especial); }
+    }
+    
+    & .cont-bar {
+        display: grid;
+        place-items: center;
+        z-index: 10;
+        padding: 0 10px;
+        
+        & .bar {
+            border-radius: 0 0 3px 3px;
+            background-color: var(--bg-body-br4);
+            width: 30px;
+            border: 1px solid var(--bg-body-br3);
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 10px;
+                background: var(--bg-body-br3);
+                border: 1px solid var(--bg-body-br3);
+            }
+            
+            &::after {
+                position: absolute;
+                content: '';
+                top: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 20px;
+                background: var(--btn-orange);
+                border-radius: 3px 3px 0 0;
+            }
+
+            &:hover {
+                opacity: 1;
+                & .tooltip { scale: 1; }
+            }
+        }
+
+        & .tooltip {
+            scale: 0;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            transition: 100ms;
+            background-color: var(--bg-body-br1);
+            padding: var(--padding-medium);
+            border-radius: var(--radius);
+            border: none;
+            z-index: 100 !important;
+
+            & h3 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--gap-medium);
+                font-size: 12px;
+                color: var(--font-especial);
+                font-weight: 500;
+
+                & span { font-size: 12px; color: var(--font-secondary); }
+            }
+        }
+    }
+}
