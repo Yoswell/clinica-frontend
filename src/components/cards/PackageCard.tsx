@@ -17,14 +17,14 @@ export function PackageCard() {
                 {/* Buttons of action */}
                 <div className="cont-button-action cont-button-action-big">
                     <button
-                        className="btn btn-black"
+                        className="btn btn-black btn-edit"
                         aria-label="Button to edit service">
-                        Editar paquete       
+                        <i className="ri-pencil-fill"></i>
                     </button>
                     <button
-                        className="btn btn-black"
+                        className="btn btn-black btn-delete"
                         aria-label="Button to delete service">
-                        Eliminar paquete      
+                        <i className="ri-delete-bin-5-line"></i>     
                     </button>
                 </div>
             </article>

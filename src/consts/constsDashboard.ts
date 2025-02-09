@@ -33,7 +33,7 @@ export const ServiciosComprados = [
     { 
         id: 1, 
         name: "Cardiología", 
-        service_price: 5000, 
+        service_price: 1000, 
         date: "2025-01-23", 
         medico: {
             id: 1,
@@ -62,7 +62,7 @@ export const ServiciosComprados = [
     { 
         id: 2, 
         name: "Cardiología", 
-        service_price: 5000, 
+        service_price: 9000, 
         date: "2025-01-23", 
         medico: {
             id: 1,
@@ -91,7 +91,7 @@ export const ServiciosComprados = [
     { 
         id: 3, 
         name: "Cardiología", 
-        service_price: 5000, 
+        service_price: 14000, 
         date: "2025-01-23", 
         medico: {
             id: 1,
@@ -168,6 +168,26 @@ export const Pacientes = [
         email: "miguel@example.com",
         number_phone: 612345678,
         direction: "Calle Falsa 123"
+    },
+    {
+        id: 3,
+        first_name: "Margarita",
+        last_name: "Jimenez",
+        dni: "12345678A",
+        born_date: "15/08/1985",
+        email: "miguel@example.com",
+        number_phone: 612345678,
+        direction: "Calle Falsa 123"
+    },
+    {
+        id: 4,
+        first_name: "Lucia",
+        last_name: "Monte Blanco",
+        dni: "12345678A",
+        born_date: "15/08/1985",
+        email: "miguel@example.com",
+        number_phone: 612345678,
+        direction: "Calle Falsa 123"
     }
 ]
   
@@ -186,4 +206,3 @@ export const Medicos = [
         salary: 3500
     }
 ]
-  

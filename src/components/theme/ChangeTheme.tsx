@@ -7,7 +7,7 @@ const lightTheme = {
     "--bg-body-br4": "#f9fbfc",
     "--bg-body-br8": "#ffffff",
     "--bg-black": "#0f1318",
-    "--bg-gray": "#1f2125",
+    "--bg-gray": "#0e1115",
     "--bg-gray-br1": "#2c2f36",
     "--bg-white": "#fff",
     
@@ -15,20 +15,20 @@ const lightTheme = {
     "--font-primary": "#1f2125", 
     "--font-secondary": "#6f7277",
     
-    "--btn-blue": "#0067ff",
+    "--btn-blue": "#0f3d7e",
     "--btn-blue-dark": "#243969",
     "--btn-blue-ligth": "#eaecf8",
     
     "--btn-orange": "#fb802a",
-    "--btn-orange-dark": "#2c180c",
+    "--btn-orange-dark": "#eacaad",
     "--btn-orange-ligth": "#fff1e5",
 
     "--btn-red": "#c26d6d",
-    "--btn-red-dark": "#692424",
+    "--btn-red-dark": "#eaadad",
     "--btn-red-ligth": "#fff1f1",
 
     "--btn-green": "#6dc29a",
-    "--btn-green-dark": "#24695e",
+    "--btn-green-dark": "#adead3",
     "--btn-green-ligth": "#f1fffd",
 }
 

@@ -42,13 +42,25 @@ export function AddConsult() {
                             <p className="d-flex gap-5"><span>*</span>Por favor seleccione una fecha y una hora</p>
                         </div>
 
-                         {/* Group form */}
+                        {/* Group form */}
                         <div className="form-group">
                             <label>Seleccionar un servicio o un paquete</label>
                             <p>Los paquetes reciven un descuento de 15%</p>
                         </div>
 
-                        <Selects<Pacient> originalList={Pacientes}></Selects>
+                        {/* Group form */}
+                        <div className="form-group">
+                            <label>Seleccionar un paciente</label>
+                            <Selects<Pacient> originalList={Pacientes}></Selects>
+                            <p className="d-flex gap-5"><span>*</span>Por favor seleccione un paciente</p>
+                        </div>
+
+                        {/* Group form */}
+                        <div className="form-group">
+                            <label>Seleccionar un medico</label>
+                            <Selects<Pacient> originalList={Pacientes}></Selects>
+                            <p className="d-flex gap-5"><span>*</span>Por favor seleccione un medico</p>
+                        </div>
 
                         {/* Group form */}
                         <div className="form-group">

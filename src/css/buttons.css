@@ -24,6 +24,14 @@
     & i { font-size: 18px; }
 }
 
+.btn-edit {
+    color: var(--btn-orange) !important;
+}
+
+.btn-delete {
+    color: var(--btn-red) !important;
+}
+
 .btn-bar {
     display: flex;
     gap: var(--gap-small);

@@ -103,7 +103,7 @@
 .cardDate {
     padding: var(--padding-big);
     border-radius: 10px;
-    background-color: var(--bg-body-br1);
+    background-color: var(--bg-body-br8);
 
     & div {
         display: flex;
@@ -176,7 +176,7 @@
 /*-----------------------------------------------------------------*/
 .cont-button-action {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
     gap: var(--gap-small);
     
@@ -196,13 +196,12 @@
 
 .cont-button-action-big {
     display: flex;
-    align-items: center;
-    gap: var(--gap-medium);
+    align-items: flex-end;
+    gap: var(--gap-small);
     
     & .btn {
-        width: 100%;
-        height: 30px;
-        padding: 0;
+        width: 30px;
+        height: 25px;
         display: grid;
         place-content: center;
 
@@ -242,7 +241,6 @@
 .card-active {
     background: var(--btn-blue-ligth) !important;
     border-color: var(--btn-ligth);
-    outline: 1px solid var(--btn-blue);
     & p { color: var(--btn-blue-dark) !important; }
 }
 
