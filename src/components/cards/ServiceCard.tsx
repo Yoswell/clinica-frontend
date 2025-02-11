@@ -11,12 +11,12 @@ export function ServiceCard() {
                 </div>
                 <div className="cont-button-action">
                     <button
-                        className="btn btn-black"
+                        className="btn btn-black btn-edit"
                         aria-label="Edit service">
                         <i className="ri-pencil-fill"></i>        
                     </button>
                     <button
-                        className="btn btn-black"
+                        className="btn btn-black btn-delete"
                         aria-label="Delete service">
                         <i className="ri-delete-bin-5-line"></i>       
                     </button>

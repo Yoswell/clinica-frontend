@@ -12,11 +12,15 @@ export function MedicTable() {
     const [pageSize, setPageSize] = useState(10)
 
     useEffect(() => {
-        setMedicList(Medicos);
         setOriginalList(Medicos);
+        setMedicList(Medicos);
     }, [])
     
-    useSearch<Medic>({search, originalList, setList: setMedicList, keys: ["first_name", "last_name", "dni", "born_date", "email", "number_phone", "direction", "speciality", "turns", "salary"]})
+    useSearch<Medic>({
+        search, 
+        list: originalList, 
+        setList: setMedicList,
+        keys: ["first_name", "last_name", "dni", "born_date", "email", "number_phone", "direction", "speciality", "turns", "salary"]})
 
     const startIndex = (page - 1) * pageSize
     const paginatedItems = medicList.slice(startIndex, startIndex + pageSize)
@@ -27,7 +31,7 @@ export function MedicTable() {
                 search={search} 
                 setSearch={setSearch} 
                 setList={setMedicList} 
-                originalList={originalList}
+                list={originalList}
                 keys={["first_name", "last_name", "dni", "born_date", "email", "number_phone", "direction", "speciality", "turns", "salary"]}
                 placeholder="Campos filtrables: first_name, last_name, dni, born_date, email, number_phone, direction, speciality, turns, salary">
             </FilterTable>

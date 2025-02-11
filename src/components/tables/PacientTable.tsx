@@ -12,12 +12,15 @@ export function PacientTable() {
     const [pageSize, setPageSize] = useState(10)
   
     useEffect(() => {
-        setPacientList(Pacientes);
         setOriginalList(Pacientes);
+        setPacientList(Pacientes);
     }, [])
 
-  
-    useSearch<Pacient>({ search, originalList, setList: setPacientList, keys: ["first_name", "last_name", "dni", "born_date", "email", "number_phone", "direction"] })
+    useSearch<Pacient>({ 
+        search, 
+        list: originalList,
+        setList: setPacientList, 
+        keys: ["first_name", "last_name", "dni", "born_date", "email", "number_phone", "direction"] })
 
     const startIndex = (page - 1) * pageSize;
     const paginatedItems = pacientList.slice(startIndex, startIndex + pageSize)
@@ -28,7 +31,7 @@ export function PacientTable() {
                 search={search} 
                 setSearch={setSearch} 
                 setList={setPacientList} 
-                originalList={originalList}
+                list={originalList}
                 keys={["first_name", "last_name", "dni", "born_date", "email", "number_phone", "direction"]}
                 placeholder="Campos filtrables: first_name, last_name, dni, born_date, email, number_phone, direction">
             </FilterTable>

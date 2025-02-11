@@ -8,15 +8,15 @@
     --bg-body-br3: #e6e5e7;
     --bg-body-br4: #f9fbfc;
     --bg-body-br8: #ffffff;
-    --bg-black: #0f1318;
-    --bg-gray: #1f2125;
+    --bg-black: #0c0f12;
+    --bg-gray: #0e1115;
     --bg-gray-br1: #2c2f36;
     --bg-white: #fff;
 
     /* Fonts */
     --font-especial: #0f1318;
     --font-primary: #1f2125;
-    --font-secondary: #6f7277;
+    --font-secondary: #6a7484;
 
     /* Modals information */
     --btn-blue: #0f3d7e;
@@ -25,17 +25,17 @@
 
     /* Modals warning */
     --btn-orange: #fb802a;
-    --btn-orange-dark: #2c180c;
+    --btn-orange-dark: #eacaad;
     --btn-orange-ligth: #fff1e5;
 
     /* Modal error and text */
     --btn-red: #c26d6d;
-    --btn-red-dark: #692424;
+    --btn-red-dark: #eaadad;
     --btn-red-ligth: #fff1f1;
 
     /* Modal succes and text */
     --btn-green: #6dc29a;
-    --btn-green-dark: #24695e;
+    --btn-green-dark: #adead3;
     --btn-green-ligth: #f1fffd;
 
     /* Logo image */
@@ -128,6 +128,13 @@ input {
 
 .scroll-x { overflow-x: auto; }
 .scroll-y { overflow-y: scroll; }
+
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
 
 & h1 { 
     font-size: clamp(20px, 3vw, 30px);

@@ -1,30 +1,37 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { DialogBody, DialogCloseTrigger, DialogContent, DialogFooter, DialogHeader, DialogRoot, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { RadioGroup, Radio } from "@/components/ui/radio"
 
 interface FilterTableProps<T> {
     search: string
+    list: T[]
     setSearch: (value: string) => void
     setList: (value: T[]) => void
-    originalList: T[]
     keys: (keyof T)[]
     placeholder: string
 }
 
-export function FilterTable<T>({ search, setSearch, setList, originalList, keys, placeholder }: FilterTableProps<T>) {
+export function FilterTable<T>({ search, list, setSearch, setList, keys, placeholder }: FilterTableProps<T>) {
     const [value, setValue] = useState<string>("")
 
+    useEffect(() => {
+        if (value) {
+            const key = keys.find((k) => k.toString() === value)
+            if (key) orderByField(key)
+        }
+    }, [value]);
+
     const orderByField = (field: keyof T) => {
-        const orderedList = [...originalList].sort((a, b) => {
+        const orderedList = [...list].sort((a, b) => {
             const valueA = (a[field] ?? "").toString().toLowerCase()
             const valueB = (b[field] ?? "").toString().toLowerCase()
-            return valueA.localeCompare(valueB)
+            return valueA.localeCompare(valueB);
         })
-        setList(orderedList)
-    }
+        setList(orderedList)   
+    } 
 
     const resetFilters = () => {
-        setList([...originalList])
+        setList([...list])
         setSearch("")
         setValue("")
     }
@@ -46,7 +53,7 @@ export function FilterTable<T>({ search, setSearch, setList, originalList, keys,
             <DialogRoot>
                 <DialogTrigger asChild>
                     <button className="btn btn-filter" aria-label="Button to filter records">
-                        <i className="ri-equalizer-line"></i> Filtrar
+                        <i className="ri-equalizer-line"></i> Ordenar
                     </button>
                 </DialogTrigger>
                 <button className="btn btn-filter" aria-label="Button to reset records" onClick={resetFilters}>
@@ -68,9 +75,13 @@ export function FilterTable<T>({ search, setSearch, setList, originalList, keys,
                             className="radio-group"
                             value={value}
                             onValueChange={(selectedField) => {
-                                setValue(selectedField.value)
-                                const key = keys.find((k) => k.toString() === selectedField.value)
-                                if (key) orderByField(key)
+                                const selectedValue = typeof selectedField === "string" ? selectedField : selectedField.value;
+                                const key = keys.find((n) => n.toString() === selectedValue)
+
+                                if (key) {
+                                    setValue(key.toString())
+                                    orderByField(key) 
+                                }
                             }}>
                             {keys.slice(0, 10).map((key, index) => (
                                 <Radio key={index} className="radio" value={key.toString()}>
