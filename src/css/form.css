@@ -43,6 +43,21 @@ form {
         border-radius: var(--radius);
         background-color: var(--bg-body-br8);
     }
+
+    & select{
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: var(--radius);
+        background-color: var(--bg-body-br8);
+        color: black;
+    }
+}
+
+.select-root{
+    width: 100%;
+        padding: 10px 15px;
+        border-radius: var(--radius);
+        background-color: var(--bg-body-br8);
 }
 
 .end-content {
@@ -51,6 +66,8 @@ form {
     justify-content: flex-end;
     gap: var(--gap-medium);
 }
+
+
 
 .column { font-weight: 500; }
 

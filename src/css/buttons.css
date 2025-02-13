@@ -5,6 +5,7 @@
     align-items: center;
     gap: var(--gap-small);
     padding: 0 15px;
+    cursor: pointer;
 }
 
 .btn-avatar {
@@ -57,7 +58,16 @@
         font-weight: 500;
     }
 }
-
+.btn-align{
+    display: flex;
+    align-items: center;
+    justify-content:left ;
+    gap: var(--gap-medium);
+    background-color: var(--bg-body-br8);
+    border-radius: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
 .input-filter {
     display: flex;
     align-items: center;

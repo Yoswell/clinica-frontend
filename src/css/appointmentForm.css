@@ -1,0 +1,26 @@
+.doctor-card-profile-data{
+    display: flex;
+    margin: 0.3rem;
+
+    .info{
+        margin-left: 1rem;
+    }
+
+    & h3{
+        font-weight: 600;
+    }
+
+    & p{
+        color: var(--font-secondary)
+    }
+}
+
+.doctor-card{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.availabilities{
+    margin-top: 1rem;
+    padding: 1rem;
+}

@@ -3,6 +3,7 @@ import { Container } from "@/components/Container"
 import { useState } from "react"
 import { Selects } from "@/components/selects/FillSelects"
 import { Pacientes } from "@/consts/constsDashboard"
+import { AppointmentForm } from "@/components/forms/AppointmentForm"
 
 export function AddConsult() {
     // States to send request
@@ -30,81 +31,7 @@ export function AddConsult() {
                         aria-label="Form to create a new consult"
                         onSubmit={(e) => e.preventDefault()}>
 
-                        {/* Group form */}
-                        <div className="form-group">
-                            <label>Fecha de creación</label>
-                            <input
-                                type="datetime-local"
-                                name="consult_date"
-                                contentEditable={true}
-                                onChange={() => {}}>
-                            </input>
-                            <p className="d-flex gap-5"><span>*</span>Por favor seleccione una fecha y una hora</p>
-                        </div>
-
-                        {/* Group form */}
-                        <div className="form-group">
-                            <label>Seleccionar un servicio o un paquete</label>
-                            <p>Los paquetes reciven un descuento de 15%</p>
-                        </div>
-
-                        {/* Group form */}
-                        <div className="form-group">
-                            <label>Seleccionar un paciente</label>
-                            <Selects<Pacient> originalList={Pacientes}></Selects>
-                            <p className="d-flex gap-5"><span>*</span>Por favor seleccione un paciente</p>
-                        </div>
-
-                        {/* Group form */}
-                        <div className="form-group">
-                            <label>Seleccionar un medico</label>
-                            <Selects<Pacient> originalList={Pacientes}></Selects>
-                            <p className="d-flex gap-5"><span>*</span>Por favor seleccione un medico</p>
-                        </div>
-
-                        {/* Group form */}
-                        <div className="form-group">
-                            <label>Consulta pagada o pendiente</label>
-                            <div className="container-border d-grid gap-8"> 
-                                <p>Dejar vacio en caso de estar pendiente</p>
-                                <input
-                                    type="checkbox"
-                                    id="pay"
-                                    name="pay"
-                                    hidden
-                                    onClick={() => {}}>
-                                </input>
-                                <label className="checkbox" htmlFor="pay">{<i className="ri-check-line"></i>}</label>
-                            </div>
-                        </div>
-
-                         {/* Group form */}
-                        <div className="form-group">
-                            <label>El paciente posee seguro medico/obra social?</label>
-                            <div className="container-border d-grid gap-8">
-                                <p>Aplicar descuento de 20%</p>
-                                <input
-                                    type="checkbox"
-                                    id="health_insurance"
-                                    name="health_insurance"
-                                    hidden
-                                    onClick={() => {}}>
-                                </input>
-                                <label className="checkbox" htmlFor="health_insurance">{<i className="ri-check-line"></i>}</label>
-                            </div>
-                        </div>
-
-                        {/* Group form */}
-                        <div className="form-group">
-                            <label>Monto total con descuento aplicado</label>
-                            <input
-                                type="number"
-                                id="total_price"
-                                name="total_price"
-                                disabled
-                                value="0">
-                            </input>
-                        </div>
+                    <AppointmentForm></AppointmentForm>
 
                         {/* Buttons of action */}
                         <div className="end-content">
