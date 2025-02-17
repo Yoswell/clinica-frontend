@@ -12,8 +12,7 @@ export const AppointmentForm = () => {
     fetchData(type);
   };
 
-  const token =
-    "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJBRE1JTiJdLCJ1c2VySWQiOjEsImp0aSI6IjcxM2E1MWZiLWEzZDUtNDAxYi1hZDdlLWY3MzhkMTI3ODViYSIsInN1YiI6ImRlZmF1bHRhZG1pbkBjbGluaWNhLmNvbSIsImlhdCI6MTczOTQ2ODgwNSwiZXhwIjoxNzM5NTU1MjA1fQ.vyZfMC-z5SN3H1RMIavV0F_3V6QabcS6Imau7nIrjfQ";
+  const token = localStorage.getItem("token");
 
   const fetchData = async (type) => {
     try {

@@ -51,28 +51,32 @@ export const Availability = ({ serviceId, token }) => {
   }, [serviceId]);
 
   const handleClick = (date, time, doctorId) => {
-    console.log(doctorId)
+    console.log(doctorId);
     console.log(date);
-    console.log(time)
-  }
+    console.log(time);
+  };
 
   return (
     <div>
-        <h4>Turnos Disponibles:</h4>
+      <h4>Turnos Disponibles:</h4>
       {availabilities.length > 0 ? (
         <div className="availabilities">
           {availabilities.map((doctor) => (
             <div>
-            <DoctorCard key={doctor.doctor_id} doctor={doctor} onSelectSlot={handleClick}></DoctorCard>
-            <hr></hr>
+              <DoctorCard
+                key={doctor.doctor_id}
+                doctor={doctor}
+                onSelectSlot={handleClick}
+              ></DoctorCard>
+              <hr></hr>
             </div>
           ))}
         </div>
-      ) : 
+      ) : (
         <div>
-            <h4>No hay turnos disponibles..</h4>
+          <h4>No hay turnos disponibles..</h4>
         </div>
-      }
+      )}
     </div>
   );
 };

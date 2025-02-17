@@ -16,11 +16,13 @@ thead {
         background-color: var(--bg-body-br1);
         
         & th {
-            padding: 0px 15px !important;
+            /*padding: 0px 15px !important;*/
+            
             white-space: nowrap;
             font-weight: 500;
             
-            &:last-child { text-align: right; padding-left: 0 !important; }
+            /* OJO CON ESTO: ROMPE TODOS LOS ESTILOS!
+            &:last-child { text-align: right; padding-left: 0 !important; } */
         }
     }
 }

@@ -31,7 +31,7 @@ export function AddConsult() {
                         aria-label="Form to create a new consult"
                         onSubmit={(e) => e.preventDefault()}>
 
-                    <AppointmentForm></AppointmentForm>
+                    <AppointmentForm/>
 
                         {/* Buttons of action */}
                         <div className="end-content">

@@ -84,3 +84,7 @@
 
     & img { width: 45px; }
 }
+
+.error-msg{
+    color: red;
+}

@@ -5,6 +5,7 @@ const menuSections = [
         title: "Inicio",
         items: [
             { to: "/", icon: "ri-stack-line", label: "Dashboard", key: "d1" },
+            { to: "/profile", icon: "ri-stack-line", label: "Perfil", key:"d2"},
         ],
     },
     {
